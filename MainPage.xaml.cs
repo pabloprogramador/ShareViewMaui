@@ -1,25 +1,36 @@
-﻿namespace ShareViewMaui;
+﻿using Microsoft.Maui.Graphics;
+
+namespace ShareViewMaui;
 
 public partial class MainPage : ContentPage
 {
-	int count = 0;
+    Page lixo = new LixoPage();
 
 	public MainPage()
 	{
 		InitializeComponent();
-	}
+        
+        //var graphics = (MauiContext as IMauiContext)?.Context?.GetGraphics();
+    }
 
-	private void OnCounterClicked(object sender, EventArgs e)
+    private void OnOpenShareView(object sender, EventArgs e)
 	{
-		count++;
+       
 
-		if (count == 1)
-			CounterBtn.Text = $"Clicked {count} time";
-		else
-			CounterBtn.Text = $"Clicked {count} times";
-
-		SemanticScreenReader.Announce(CounterBtn.Text);
+        Popup.Open(new DetailsPopup(pgImage));
 	}
-}
 
+    private void OnOpenShareView2(object sender, EventArgs e)
+    {
+
+
+        Popup.Open(new DetailsPopup(pgImage2));
+    }
+
+    void Button_Clicked(System.Object sender, System.EventArgs e)
+    {
+        Application.Current.MainPage.Navigation.PushAsync(lixo);
+    }
+
+}
 

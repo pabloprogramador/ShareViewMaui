@@ -8,12 +8,27 @@
             Spacing="25"
             Padding="30,0"
             VerticalOptions="Center">
+             <Grid WidthRequest="200" HeightRequest="200">
+                <Border StrokeThickness="4"  Margin="3"/>
+                
+                <VerticalStackLayout Padding="20" Spacing="5" >
+                     <Image x:Name="pgImage2" WidthRequest="140" HeightRequest="140" Aspect="AspectFill"
+                Source="bot.png"
+                 />
+                <Label HorizontalTextAlignment="Center"
+                Text="ShareView 1"
+                FontSize="18"/>
 
+                </VerticalStackLayout>
+               
+                <ImageButton BackgroundColor="Transparent" Clicked="OnOpenShareView2"/>
+            </Grid>
             <Image
                 Source="dotnet_bot.png"
                 SemanticProperties.Description="Cute dot net bot waving hi to you!"
                 HeightRequest="200"
                 HorizontalOptions="Center" />
+            <Button Text="LIXO" Clicked="Button_Clicked"/>
 
             <Label
                 Text="Hello, World!"
@@ -28,12 +43,24 @@
                 FontSize="18"
                 HorizontalOptions="Center" />
 
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
+            <Grid WidthRequest="200" HeightRequest="200">
+                <Border StrokeThickness="4"  Margin="3"/>
+                
+                <VerticalStackLayout Padding="20" Spacing="5" >
+                     <Image x:Name="pgImage" WidthRequest="140" HeightRequest="140" Aspect="AspectFill"
+                Source="bot.png"
+                 />
+                <Label HorizontalTextAlignment="Center"
+                Text="ShareView 1"
+                FontSize="18"/>
+
+                </VerticalStackLayout>
+               
+                <ImageButton BackgroundColor="Transparent" Clicked="OnOpenShareView"/>
+            </Grid>
+
+
+
 
         </VerticalStackLayout>
     </ScrollView>
