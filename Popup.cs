@@ -7,7 +7,7 @@ namespace ShareViewMaui
         public bool IsFadeBackground = true;
         private ImageButton BackgroundBack;
         private static bool isBusy;
-
+//
         public Popup()
         {
             this.BackgroundColor = Color.FromArgb("#01000000");
